@@ -1,5 +1,7 @@
 Craaagslist::Application.routes.draw do
 
+  root to: 'categories#index'
+
   resources :categories, :only => [:index, :show]
   
   # The priority is based upon order of creation:
