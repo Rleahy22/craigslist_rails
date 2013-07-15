@@ -3,6 +3,10 @@ Craaagslist::Application.routes.draw do
   root to: 'categories#index'
 
   resources :categories, :only => [:index, :show]
+
+  resources :users
+
+  resources :posts
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
