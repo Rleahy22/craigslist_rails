@@ -1,4 +1,7 @@
 Craaagslist::Application.routes.draw do
+
+  resources :categories, :only => [:index, :show]
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
