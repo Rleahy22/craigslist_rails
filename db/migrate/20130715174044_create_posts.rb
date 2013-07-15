@@ -2,8 +2,8 @@ class CreatePosts < ActiveRecord::Migration
   def up
     create_table :posts do |t|
       t.string :name
-      t.integer :cateogry_id
-      t.integer :user_id
+      t.references :category
+      t.references :user
       t.text :content
 
       t.timestamps
