@@ -2,9 +2,10 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
   include BCrypt
+  attr_accessible :name, :password, :email
 
   validates :email, :uniqueness => true
-  validates_format_of :email, :with => /\w+@w+\.[a-zA-Z]{2,}/
+  validates_format_of :email, :with => /\w+@\w+\.[a-zA-Z]{2,}/
   validates :name, :presence => true
 
   has_many :posts
