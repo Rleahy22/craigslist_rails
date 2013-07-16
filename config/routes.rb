@@ -4,9 +4,9 @@ Craaagslist::Application.routes.draw do
 
   resources :categories, :only => [:index, :show]
 
-  resources :users
+  resources :users, :except => [:index]
 
-  resources :posts
+  resources :posts, :except => [:index]
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
