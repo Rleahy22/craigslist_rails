@@ -1,0 +1,5 @@
+<div id="errors">
+  <%= @user.errors.full_messages if @user.errors.any? %>
+</div>
+
+<%= render "user_form" %>

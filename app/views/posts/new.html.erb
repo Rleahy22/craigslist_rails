@@ -1,0 +1,5 @@
+<div id="errors">
+  <%= @post.errors.full_messages if @post.errors.any? %>
+</div>
+
+<%= render 'post_form' %>

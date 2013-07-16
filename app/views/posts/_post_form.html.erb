@@ -1,0 +1,6 @@
+<%= form_for @post do |f| %>
+  <%= f.text_field :name, placeholder: "name" %>
+  <%= f.text_area :content, placeholder: "description" %>
+  <%= collection_select(:post, :category_id, Category.all, :id, :name) %>
+  <%= f.submit "Submit" %>
+<% end %>
